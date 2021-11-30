@@ -1,0 +1,9 @@
+@use 'variables';
+@use 'mixins';
+
+header {
+    height: 100px;
+    width: 100px;
+    background-color: variables.$black;
+}
+
