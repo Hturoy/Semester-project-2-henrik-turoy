@@ -1,17 +1,29 @@
 
 //API base url
 const apiUrl = 'http://localhost:1337/'
-//Reusable function for fetching the API, change target to the part of the api you need as a"string"
-export async function fetchApi (target) {
+
+export let featuredList = []
+export let productList = []
+
+
+export async function fetchApi () {
+
     
 
     try {
-        const response = await fetch (apiUrl + `${target}`);
+        const response = await fetch (apiUrl + `products`);
         const json = await response.json();
-        console.log(json)
 
+        json.forEach(element => {
+            productList.push(element)
+            if(element.featured){
+            featuredList.push(element)}
+        });
 
+        
     }
+
+
 
 
     catch(error) {
