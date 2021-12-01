@@ -1,9 +1,52 @@
 @use 'variables';
 @use 'mixins';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&family=Roboto:ital,wght@0,400;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    list-style: 0;
+    font-family: 'Roboto', sans-serif;
+    color: variables.$white;
+}
+
+body {
+    background-color: variables.$beige;
+}
+
 header {
     height: 100px;
-    width: 100px;
-    background-color: variables.$black;
+    width: 100%;
+    background-color: variables.$light-brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo-container {
+        margin: 10px;
+
+        .logo{
+            width: 90px;
+        }
+    }
+
+
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: right;
+
+        .nav-link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 25px;
+        }
+}
+
 
