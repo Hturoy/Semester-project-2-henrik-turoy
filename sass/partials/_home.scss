@@ -43,18 +43,46 @@ h1 {
 .home-bottom-container {
     background-color: variables.$white;
     width: 80%;
-    height: 500px;
+    padding: 20px;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
         p{
             color: variables.$black;
         }
 }
 
-.featured-product {
-    width: 30%;
-    height: 80%;
+.product-card {
+    margin: 3px;
+    border: solid 1px variables.$black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;        
+        h3 {
+            color: variables.$black;
+        }
+
+        img{
+            max-width: 100%;
+        }
+}
+
+.inner-product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 80%;
+        img{
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        img:hover{
+            opacity: 50%;
+        }
 }
