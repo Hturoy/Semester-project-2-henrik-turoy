@@ -1,0 +1,36 @@
+@use 'variables';
+@use 'mixins';
+
+.product-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+
+}
+
+.product-card {
+    margin: 3px;
+    border: solid 1px variables.$black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px; 
+    width: 30%;      
+    max-width: 400px; 
+    background-color: variables.$white;
+        h3, p {
+            color: variables.$black;
+        }
+
+        img{
+            max-width: 100%;
+        }
+}

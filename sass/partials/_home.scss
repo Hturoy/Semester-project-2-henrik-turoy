@@ -61,8 +61,11 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;        
-        h3 {
+    min-width: 250px; 
+    width: 30%;      
+    max-width: 400px; 
+    background-color: variables.$white;
+        h3, p {
             color: variables.$black;
         }
 
