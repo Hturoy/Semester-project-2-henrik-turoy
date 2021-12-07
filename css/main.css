@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+input {
+  color: #0D0C08;
+}
+
 h1, h2, h3, h4 {
   font-family: "Roboto Slab", serif;
 }
