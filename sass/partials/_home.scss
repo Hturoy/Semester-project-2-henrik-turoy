@@ -16,10 +16,12 @@
 
 
 .new-arrivals {
-    width: 80%;
+    max-width: 80%;
+    padding: 12px;
     height: 300px;
     background-color: variables.$white;
     display: flex;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -88,4 +90,29 @@ h1 {
         img:hover{
             opacity: 50%;
         }
+}
+
+@media only screen and (max-width: 980px){
+    .home-top {
+        justify-content: center;
+    }
+
+    .home-bottom{
+        height: 100%;
+        align-items: baseline;
+    }
+
+    .home-bottom-container {
+        flex-direction: column;
+        width: 400px;
+        height: auto;
+    }
+
+    .new-arrivals {
+        height: 100px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+  
 }
