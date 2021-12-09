@@ -1,3 +1,4 @@
+import { addItem } from './utils/addToCart.js'
 import { apiUrl } from './utils/api.js'
 import { drawCard } from './utils/drawList.js'
 
@@ -19,6 +20,8 @@ const url = apiUrl
             productList.push(product)
         });
         drawCards()
+        addItem(productList)
+
     }
 
 
@@ -28,7 +31,7 @@ const url = apiUrl
         productList.forEach(product => {
            
                 container.innerHTML += drawCard(product)
-            
+
         });
     }
 
@@ -37,7 +40,6 @@ fetchApi()
 
 
 
-let filterName;
 
 input.addEventListener('keyup', async () => {
     const filterValue = input.value.toLowerCase().trim()
@@ -70,3 +72,5 @@ input.addEventListener('keyup', async () => {
         }
 
 })
+
+

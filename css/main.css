@@ -36,6 +36,17 @@ header .logo-container .logo {
   width: 90px;
 }
 
+.removeBtn {
+  background-color: #594327;
+  border: 0;
+  color: #F2F2F2;
+  padding: 8px;
+  margin: 0px 0px 5px 0;
+}
+.removeBtn :hover {
+  background-color: #736355;
+}
+
 .desktop-links {
   display: flex;
   flex-direction: row;

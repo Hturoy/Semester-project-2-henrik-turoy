@@ -12,6 +12,6 @@ export function drawCard (i){
         </div>
 
     `
-
+    
 
 }

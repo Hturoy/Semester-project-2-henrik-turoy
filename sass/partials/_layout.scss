@@ -44,6 +44,20 @@ header {
 
 }
 
+.removeBtn{
+    background-color: variables.$dark-brown;
+    border: 0;
+    color: variables.$white;
+    padding: 8px;
+    margin: 0px 0px 5px 0;
+
+    :hover{
+        background-color: variables.$light-brown;
+    }
+}
+
+
+
 .desktop-links {
     display: flex;
     flex-direction: row;
