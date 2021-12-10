@@ -15,19 +15,9 @@ export const addItem = function (array) {
     
     for (const item of array){
     const addBtn = document.getElementById(item.id)
-    addBtn.addEventListener('click', () =>{
-
-        
-          const containsObj =  containsObject(item, cart)
-
-            
-           
+    addBtn.addEventListener('click', () =>{ 
                 cart.push(item)
                 localStorage.setItem('cart', JSON.stringify(cart))
-                
-            
-
-
     })
     }
 }

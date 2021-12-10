@@ -1,3 +1,4 @@
+import { addItem } from "./utils/addToCart.js"
 import { apiUrl } from "./utils/api.js"
 import { drawCard } from "./utils/drawList.js"
 
@@ -19,6 +20,7 @@ async function fetchApi () {
 
     productList.push(json)
     drawCards()
+    addItem(productList)
 }
 
 

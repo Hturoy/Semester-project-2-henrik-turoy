@@ -1,5 +1,8 @@
+import { addItem } from './utils/addToCart.js'
 import { apiUrl } from './utils/api.js'
 import { drawCard } from './utils/drawList.js'
+import { findIndex } from './utils/findIndex.js'
+
 
 const container = document.querySelector('.home-bottom-container')
 const url = apiUrl
@@ -12,10 +15,17 @@ const url = apiUrl
         const response = await fetch (url + `products`);
         const json = await response.json();
 
+        
         json.forEach(product => {
-            productList.push(product)
+            if(product.featured){
+                productList.push(product)
+            }
+
         });
+
         drawCards()
+        addItem(productList)
+
     }
 
 
@@ -24,9 +34,12 @@ const url = apiUrl
         container.innerHTML=''
         productList.forEach(product => {
             if (product.featured){
-                container.innerHTML += drawCard(product)
+                container.innerHTML += drawCard(product);
+
             }
+
         });
+
     }
 
 
