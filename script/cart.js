@@ -1,5 +1,6 @@
 import {findIndex} from './utils/findIndex.js'
 const container = document.querySelector('.cartContainer')
+const infoBox = document.querySelector('.cartInfo')
 
 let cartList = JSON.parse(localStorage.getItem('cart'))
 console.log(cartList)
@@ -22,6 +23,14 @@ function drawCart() {
 `
         
     });
+
+    infoBox.innerHTML=`Total price: ` + getSumTotal()
+
+    if(container.innerHTML===''){
+        container.innerHTML='<h2>Cart is empty</h2>'
+    }
+    
+
     removeItem()
 }
 
@@ -34,7 +43,8 @@ function removeItem() {
             cartList.splice(findIndex(cartList, item), 1)
             localStorage.setItem('cart', JSON.stringify(cartList))
             drawCart()
-
+            getSumTotal()
+            console.log(getSumTotal())
             console.log(cartList)
         })
     });
@@ -44,3 +54,22 @@ function removeItem() {
 drawCart()
 
 
+
+
+function getSumTotal() {
+    const sumList = cartList.map((item)=>{
+        return item.price
+    })
+    console.log(sumList)
+
+    if(sumList.length===0){
+        return ``
+    }
+
+    const reducer = (x, y) => x + y;
+
+    return sumList.reduce(reducer)
+}
+
+getSumTotal()
+console.log(getSumTotal())

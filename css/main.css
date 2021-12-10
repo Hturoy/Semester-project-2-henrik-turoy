@@ -208,4 +208,13 @@ h1 {
   max-width: 100%;
 }
 
+.cartWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.cartContainer {
+  margin: 10px;
+}
+
 /*# sourceMappingURL=main.css.map */
