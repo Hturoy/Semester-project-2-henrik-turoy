@@ -9,7 +9,6 @@
     text-decoration: 0;
     list-style: 0;
     font-family: 'Roboto', sans-serif;
-    color: variables.$white;
     scroll-behavior: smooth;
 }
 
@@ -18,7 +17,9 @@ input {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Roboto Slab', serif;;
+    font-family: 'Roboto Slab', serif;
+    color: variables.$black;
+
 }
 
 body {
@@ -63,6 +64,7 @@ header {
     flex-direction: row;
     align-items: baseline;
     justify-content: right;
+    color: variables.$white;
 
         .nav-link-container {
             display: flex;
