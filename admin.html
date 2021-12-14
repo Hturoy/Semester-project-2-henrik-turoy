@@ -36,33 +36,39 @@
 
     <main>
         <div class="adminContainer">
+            <div class="adminMsgContainerAdd">
+
+            </div>
             <div class="addForm">
                 <h2>add</h2>
                 <span>Name</span>
-                <input type="text" id="nameAdd">
+                <input id="nameAdd">
                 <span>Price</span>
-                <input type="number" id="priceAdd">
+                <input id="priceAdd">
                 <span>Description</span>
-                <input type="text"  id="descriptionAdd">
+                <input id="descriptionAdd">
                 <span>image url</span>
-                <input type="text" id="imgAdd">
+                <input id="imgAdd">
                 <span>featured</span>
-                <input type="checkbox" id="featuredAdd">
+                <input type="checkbox" id="featuredAdd" checked='false'>
                 <button id="add">Add item</button>
             </div>
 
             <div class="editForm">
+                <div class="adminMsgContainerEdit">
+                
+                </div>
                 <h2>edit</h2>
                 <span>Name</span>
                 <input type="text" id="nameEdit">
                 <span>Price</span>
-                <input type="number" id="priceEdit">
+                <input id="priceEdit">
                 <span>Description</span>
                 <input type="text"  id="descriptionEdit">
                 <span>image url</span>
                 <input type="text" id="imgEdit">
                 <span>featured</span>
-                <input type="checkbox" id="featuredEdit">
+                <input type="checkbox" id="featuredEdit" checked='false'>
                 <button id="edit">Edit item</button>
             </div>
         </div>
