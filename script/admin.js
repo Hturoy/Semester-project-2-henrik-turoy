@@ -11,15 +11,6 @@ const addBtn = document.querySelector('#add');
 const addMsg = document.querySelector('.adminMsgContainerAdd')
 
 
-const inputNameEdit = document.querySelector('#nameEdit');
-const inputPriceEdit = document.querySelector('#priceEdit');
-const inputDescEdit = document.querySelector('#descriptionEdit');
-const inputFeaturedEdit = document.querySelector('#featuredEdit');
-const inputImgEdit = document.querySelector('#imgEdit');
-const editBtn = document.querySelector('#edit');
-const editMsg = document.querySelector('.adminMsgContainerEdit')
-
-
 addBtn.addEventListener('click', () =>{
 
     submit()
@@ -37,7 +28,7 @@ function submit () {
     }
     console.log(name, price, description, featured, img)
 
-    addItem(name, price, description, img, featured.checked )
+    addItem(name, price, description, img, featured)
 }
 
 async function addItem (name, price, description, image_url, featured) {

@@ -50,9 +50,7 @@ function removeItem() {
             localStorage.setItem('cart', JSON.stringify(filteredArray))
             drawCart()
             getSumTotal()
-            console.log(getSumTotal())
-            console.log(cartList)
-            console.log(filteredArray)
+
         })
     });
 }
@@ -64,7 +62,7 @@ function removeItem() {
 
 
 function getSumTotal() {
-    const sumList = filteredArray.map((item)=>{
+    const sumList = cartList.map((item)=>{
         return item.price
     })
     console.log(sumList)
@@ -88,6 +86,5 @@ const filteredArray = cartList.filter((item, index) => {
 
 drawCart()
 getSumTotal()
-console.log(getSumTotal())
 
 

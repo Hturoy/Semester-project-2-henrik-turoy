@@ -46,7 +46,7 @@ async function doLogin(username, password) {
             saveToken(json.jwt);
             saveUser(json.user)
 
-            window.location.href='/'
+            window.location.href='admin.html'
         }
 
         if(json.error) {

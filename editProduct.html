@@ -35,28 +35,13 @@
     </header>
 
     <main>
-        <div class="adminContainer">
-            <a href="edit.html"><button>EDIT</button></a>
-            <div class="adminMsgContainerAdd">
-
-            </div>
-            <div class="addForm">
-                <h2>add</h2>
-                <span>Name</span>
-                <input id="nameAdd">
-                <span>Price</span>
-                <input id="priceAdd">
-                <span>Description</span>
-                <input id="descriptionAdd">
-                <span>image url</span>
-                <input id="imgAdd">
-                <span>featured</span>
-                <input type="checkbox" id="featuredAdd" checked='false'>
-                <button id="add">Add item</button>
+        <div class="editContainer">
+            <div class="editProducts">
+                
             </div>
 
             <div class="editForm">
-                <div class="adminMsgContainerEdit">
+                <div class="editMsgContainerEdit">
                 
                 </div>
                 <h2>edit</h2>
@@ -70,11 +55,15 @@
                 <input type="text" id="imgEdit">
                 <span>featured</span>
                 <input type="checkbox" id="featuredEdit" checked='false'>
-                <button id="edit">Edit item</button>
-            </div>
+                <button id="edit">Update</button>
+                <button id="delete">Delete</button>
+
+            
+        </div>
+        <div class="editProductContainer"></div>
         </div>
     </main>
 
 
 
-    <script type="module" src="/script/admin.js"></script>
+    <script type="module" src="/script/editProduct.js"></script>
