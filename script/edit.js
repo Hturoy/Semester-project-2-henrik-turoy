@@ -28,12 +28,11 @@ const url = apiUrl
         container.innerHTML=''
         productList.forEach(product => {
            
-                container.innerHTML +=     `   <div class='product-card'>
-                <a href="editProduct.html?id=${product.id}"><img src='${product.image_url}' alt='${product.title}'>
-                    <h3>${product.title}</h3></a>
+                container.innerHTML +=     `   <div class='product-card-admin'>
+                <a href="editProduct.html?id=${product.id}"><img src='${product.image_url}' alt='${product.title}'></a>
+                <a href="editProduct.html?id=${product.id}"> <h3>${product.title}</h3></a>
                     <div class='inner-product-container'>
                     <a href="editProduct.html?id=${product.id}"><p>${product.price}$</p></a>
-                    <img id='${product.id}' src="/media/icons/cart.svg" alt="cart icon">
                     </div>
                 </div>`
 

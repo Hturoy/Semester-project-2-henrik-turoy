@@ -12,8 +12,10 @@ const addMsg = document.querySelector('.adminMsgContainerAdd')
 
 
 addBtn.addEventListener('click', () =>{
+const confirm = window.confirm('Are you sure?')
+if(confirm ===true){
+    submit()}
 
-    submit()
 });
 
 function submit () {

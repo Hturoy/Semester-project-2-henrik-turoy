@@ -1,0 +1,99 @@
+@use 'variables';
+
+
+.adminContainer, .editForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+        .addInput{
+            width: 280px;
+            height: 30px;
+        }
+}
+
+.addForm{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.formBotton {
+    display: flex;
+    flex-direction: row;
+}
+
+.editLink{
+    border: 0;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: variables.$white;
+}
+
+.here{
+    border: solid 1px variables.$black;
+    opacity: 70%;
+}
+
+
+.product-card-admin {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    margin: 20px;
+    
+    a{
+        color: variables.$black;
+    }
+
+    h3{
+        margin: 0 20px 0 20px;
+    }
+    img{
+        height: 150px;
+    }
+}
+
+.editContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.editNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-card-edit {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+    margin: 20px;
+    
+    a{
+        color: variables.$black;
+    }
+
+    h3{
+        margin: 0 20px 0 20px;
+    }
+    img{
+        height: 150px;
+    }
+}
+
+.editProductContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -5,7 +5,6 @@ const infoBox = document.querySelector('.cartInfo')
 let cartList = JSON.parse(localStorage.getItem('cart'))
 
 
-console.log(cartList)
 
 
 
@@ -27,17 +26,19 @@ function drawCart() {
             </div>
         </div>
 `
+infoBox.innerHTML=`Total price: ` + getSumTotal();
+
         
     });
 
-    infoBox.innerHTML=`Total price: ` + getSumTotal()
+    removeItem()
+
 
     if(container.innerHTML===''){
         container.innerHTML='<h2>Cart is empty</h2>'
     }
     
 
-    removeItem()
 }
 
 
@@ -48,8 +49,11 @@ function removeItem() {
         removeBtn.addEventListener('click', ()=>{
             filteredArray.splice(findIndex(filteredArray, item), 1)
             localStorage.setItem('cart', JSON.stringify(filteredArray))
+
             drawCart()
-            getSumTotal()
+            console.log(getSumTotal())
+            getSumTotal();
+
 
         })
     });
@@ -62,18 +66,19 @@ function removeItem() {
 
 
 function getSumTotal() {
-    const sumList = cartList.map((item)=>{
+    const sumList = JSON.parse(localStorage.getItem('cart')).map((item)=>{
         return item.price
     })
     console.log(sumList)
 
     if(sumList.length===0){
-        return ``
+        infoBox.innerHTML=`<p>No products in cart</p>`
+    }else{    
+        const reducer = (x, y) => x + y;
+        return sumList.reduce(reducer)
     }
 
-    const reducer = (x, y) => x + y;
 
-    return sumList.reduce(reducer)
 }
 
 const filteredArray = cartList.filter((item, index) => {
@@ -85,6 +90,5 @@ const filteredArray = cartList.filter((item, index) => {
 
 
 drawCart()
-getSumTotal()
 
 

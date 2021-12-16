@@ -36,42 +36,34 @@
 
     <main>
         <div class="adminContainer">
-            <a href="edit.html"><button>EDIT</button></a>
+            <h1>Add new item</h1>
+
+            <div class="adminNav">
+                <a  href="edit.html"><button class="editLink here">ADD</button></a>
+
+                <a  href="edit.html"><button class="editLink">EDIT</button></a>
+            </div>
             <div class="adminMsgContainerAdd">
 
             </div>
+                
+          
             <div class="addForm">
-                <h2>add</h2>
                 <span>Name</span>
-                <input id="nameAdd">
+                <input class="addInput" id="nameAdd">
                 <span>Price</span>
                 <input id="priceAdd">
                 <span>Description</span>
-                <input id="descriptionAdd">
+                <input class="addInput" id="descriptionAdd">
                 <span>image url</span>
-                <input id="imgAdd">
-                <span>featured</span>
-                <input type="checkbox" id="featuredAdd" checked='false'>
-                <button id="add">Add item</button>
+                <input class="addInput" id="imgAdd">
+                <div class="formBottom">
+                    <span>featured</span>
+                    <input type="checkbox" id="featuredAdd" checked='false'>
+                    <button class="editLink" id="add">Add item</button>
+                </div>
             </div>
 
-            <div class="editForm">
-                <div class="adminMsgContainerEdit">
-                
-                </div>
-                <h2>edit</h2>
-                <span>Name</span>
-                <input type="text" id="nameEdit">
-                <span>Price</span>
-                <input id="priceEdit">
-                <span>Description</span>
-                <input type="text"  id="descriptionEdit">
-                <span>image url</span>
-                <input type="text" id="imgEdit">
-                <span>featured</span>
-                <input type="checkbox" id="featuredEdit" checked='false'>
-                <button id="edit">Edit item</button>
-            </div>
         </div>
     </main>
 

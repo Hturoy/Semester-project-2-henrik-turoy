@@ -49,7 +49,12 @@ function drawCards () {
     container.innerHTML=''
     productList.forEach(product => {
        
-            container.innerHTML += drawCard(product)
+            container.innerHTML +=  `   <div class='product-card-admin'>
+            <a href="editProduct.html?id=${product.id}"><img src='${product.image_url}' alt='${product.title}'></a>
+            <a href="editProduct.html?id=${product.id}"> <h3>${product.title}</h3></a>
+                <div class='inner-product-container'>
+                </div>
+            </div>`
         
     });
 }
@@ -58,11 +63,19 @@ function drawCards () {
 fetchApi()
 
 editBtn.addEventListener('click', ()=>{
-    editForm()
+        const confirm = window.confirm('Are you sure?')
+        if(confirm ===true){
+            editForm()}
+        
+      
 })
 
 deleteBtn.addEventListener('click', ()=>{
-    deleteItem()
+    const confirm = window.confirm('are you sure')
+    if(confirm === true){
+        deleteItem()
+
+    }
 })
 
 function editForm () {
