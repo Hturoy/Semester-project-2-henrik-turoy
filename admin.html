@@ -24,8 +24,8 @@
                 <a href="products.html" class="nav-link">shop</a>
             </div>
             <div class="nav-link-container">
-               <a href="login.html"><img class="nav-icon" src="./media/icons/user.svg" alt="User icon"></a> 
-                <a href="login.html" class="nav-link">Profile</a>
+               <a class="swapLink" href="login.html"><img class="nav-icon" src="./media/icons/user.svg" alt="User icon"></a> 
+                <a class="swapLink swapText" href="login.html" class="nav-link">Login</a>
             </div>
             <div class="nav-link-container">
                 <a href="cart.html"><img class="nav-icon" src="./media/icons/cart.svg" alt="Cart icon"></a> 
@@ -62,6 +62,7 @@
                     <input type="checkbox" id="featuredAdd" checked='false'>
                     <button class="editLink" id="add">Add item</button>
                 </div>
+                <button class="logout editLink">Log out</button>
             </div>
 
         </div>
@@ -70,3 +71,5 @@
 
 
     <script type="module" src="/script/admin.js"></script>
+    <script type="module" src="/script/utils/universal.js"></script>
+
