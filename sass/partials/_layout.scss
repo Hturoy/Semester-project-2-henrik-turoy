@@ -78,4 +78,34 @@ footer {
     background-color: variables.$light-brown;
 }
 
+.nav-link{
+    color: variables.$black;
+}
+ 
+
+@media only screen and (max-width: 600px){
+
+    header{
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-link-container{
+        margin: 0;
+    }
+    .nav-icon{
+        width: 25px;
+        margin: 3px;
+    }
+    .logo{
+        display: none;
+    }
+
+    .details-container{
+       display: flex;
+       flex-wrap: wrap;
+    }
+
+
+}
 

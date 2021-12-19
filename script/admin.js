@@ -28,7 +28,6 @@ function submit () {
     if(name.length === 0 || price.length === 0 || description.length === 0){
         displayMsg('warning', 'Please add values', '.adminMsgContainerAdd')
     }
-    console.log(name, price, description, featured, img)
 
     addItem(name, price, description, img, featured)
 }
@@ -37,7 +36,6 @@ async function addItem (name, price, description, image_url, featured) {
     const url = apiUrl + 'products';
     const data = JSON.stringify({title: name, price: price, description: description, image_url: image_url, featured: featured})
     const token = getToken()
-    console.log(token)
     const options = {
         method: 'post',
         body: data,

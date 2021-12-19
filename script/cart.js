@@ -25,8 +25,8 @@ function drawCart() {
             <button id='${item.id}' class='removeBtn'>Remove</button>
             </div>
         </div>
-`
-infoBox.innerHTML=`Total price: ` + getSumTotal();
+        `
+    infoBox.innerHTML=`<h3>Total price: </h3>` + getSumTotal();
 
         
     });
@@ -45,13 +45,11 @@ infoBox.innerHTML=`Total price: ` + getSumTotal();
 function removeItem() {
     filteredArray.forEach(item => {
         const removeBtn= document.getElementById(item.id)
-        console.log(removeBtn)
         removeBtn.addEventListener('click', ()=>{
             filteredArray.splice(findIndex(filteredArray, item), 1)
             localStorage.setItem('cart', JSON.stringify(filteredArray))
 
             drawCart()
-            console.log(getSumTotal())
             getSumTotal();
 
 
@@ -69,7 +67,6 @@ function getSumTotal() {
     const sumList = JSON.parse(localStorage.getItem('cart')).map((item)=>{
         return item.price
     })
-    console.log(sumList)
 
     if(sumList.length===0){
         infoBox.innerHTML=`<p>No products in cart</p>`

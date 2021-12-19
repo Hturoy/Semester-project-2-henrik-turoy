@@ -53,7 +53,6 @@ async function doLogin(username, password) {
             displayMsg('warning', 'Invalid login details', '.msgContainer')
         }
 
-        console.log(json);
     }catch(error) {
         console.log(error)
     }

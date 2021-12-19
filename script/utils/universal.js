@@ -4,12 +4,15 @@ const link = document.querySelector('.swapLink');
 const linkTxt = document.querySelector('.swapText')
 const logOutBtn = document.querySelector('.logout')
 
+
 if(token != null){
     link.href='admin.html'
-    linkTxt.innerHTML='<p>Admin</p>'
+    linkTxt.innerHTML='<p class="nav-link">Admin</p>'
 }
 
 logOutBtn.addEventListener('click', ()=>{
     localStorage.removeItem('token')
     window.location.href='index.html'
 })
+
+

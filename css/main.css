@@ -65,6 +65,34 @@ footer {
   background-color: #736355;
 }
 
+.nav-link {
+  color: #0D0C08;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link-container {
+    margin: 0;
+  }
+
+  .nav-icon {
+    width: 25px;
+    margin: 3px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .details-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .home-top {
   height: 100vh;
   width: 100%;
@@ -189,6 +217,11 @@ h1 {
   flex-wrap: wrap;
 }
 
+#searchInput {
+  width: 300px;
+  height: 30px;
+}
+
 .product-card {
   margin: 3px;
   border: solid 1px #0D0C08;
@@ -208,6 +241,13 @@ h1 {
   max-width: 100%;
 }
 
+.details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 .cartWrapper {
   display: flex;
   flex-direction: row;
@@ -215,6 +255,8 @@ h1 {
 
 .cartContainer {
   margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .adminContainer, .editForm {

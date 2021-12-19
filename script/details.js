@@ -10,7 +10,6 @@ const url = apiUrl + `products/${id}`
 const container = document.querySelector('.details-container')
 
 
-console.log(url)
 
 let productList = []
 
@@ -29,7 +28,22 @@ function drawCards () {
     container.innerHTML=''
     productList.forEach(product => {
        
-            container.innerHTML += drawCard(product)
+            container.innerHTML += `
+            <div class='product-card'>
+            <a href="productDetails.html?id=${product.id}"><img src='${product.image_url}' alt='${product.title}'>
+                <h3>${product.title}</h3></a>
+                <div class='inner-product-container'>
+                <a href="productDetails.html?id=${product.id}"><p>${product.price}$</p></a>
+                <img id='${product.id}' src="/media/icons/cart.svg" alt="cart icon">
+                </div>
+            </div>
+
+            <div class='detailsInfo'>
+                <h3>Description</h3>
+                <p>${product.description}</p>
+             </div>  
+    
+        `
         
     });
 }

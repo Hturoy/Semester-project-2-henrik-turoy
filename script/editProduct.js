@@ -24,7 +24,6 @@ const token = getToken()
 const container = document.querySelector('.editProductContainer')
 
 
-console.log(url)
 
 let productList = []
 
@@ -88,7 +87,6 @@ function editForm () {
     if(name.length === 0 || price.length === 0 || description.length === 0){
         displayMsg('warning', 'Please add values', '.adminMsgContainerAdd')
     }
-    console.log(name, price, description, featured, img)
 
    updateItem(name, price, description, img, featured)
 
@@ -110,7 +108,6 @@ async function updateItem(name, price, description, image_url, featured){
 
     const response = await fetch(url, options)
     const json = await response.json()
-    console.log(json)
 }
 
 async function deleteItem(name, price, description, image_url, featured){
@@ -129,7 +126,6 @@ async function deleteItem(name, price, description, image_url, featured){
 
     const response = await fetch(url, options)
     const json = await response.json()
-    console.log(json)
     window.location.href='edit.html'
 
 }
